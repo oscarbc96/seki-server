@@ -4,15 +4,15 @@ services:
   drone:
     image: "drone/drone:1.0.0-rc.3"
     restart: "always"
+    env_file: "drone_config.env"
     environment:
-      DRONE_SERVER_PROTO: "https"
-      DRONE_RUNNER_CAPACITY: 2
-      DRONE_TLS_AUTOCERT: "true"
+      DRONE_SERVER_PROTO: "http"
+      DRONE_RUNNER_CAPACITY: 4
       DRONE_TIMEOUT: "24h"
-    env_file:
-      - drone_config.env
+      DRONE_CRON_INTERVAL: 30m
     ports:
       - "8080:80"
+      - "8443:443"
     volumes:
       - "./dev/drone:/data"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
