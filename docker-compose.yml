@@ -13,7 +13,7 @@ services:
       DRONE_RUNNER_CAPACITY: 2
       DRONE_TLS_AUTOCERT: "false"
       DRONE_TIMEOUT: "24h"
-    environment_file:
+    env_file:
       - drone_config.env
     ports:
       - "8080:80"
