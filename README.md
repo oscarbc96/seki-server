@@ -1,5 +1,7 @@
 # Seki Server
 
+Example project to deploy drone server.
+
 ## Run
 
 1. Run `ngrok 8080`
