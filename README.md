@@ -9,6 +9,7 @@ Example project to deploy drone server.
 3. Create `drone_config.env`
 ```
 DRONE_USER_FILTER=<bitbucket_user>
+DRONE_USER_CREATE: "username:<bitbucket_user>,admin:true"
 DRONE_BITBUCKET_CLIENT_ID=<consumer_key>
 DRONE_BITBUCKET_CLIENT_SECRET=<consumer_secret>
 DRONE_SERVER_HOST=<ngrok_url>
